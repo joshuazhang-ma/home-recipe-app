@@ -1,6 +1,6 @@
 // Our Kitchen service worker: app shell works offline. Bump VERSION when index.html changes.
-const VERSION = 'ourkitchen-v1';
-const SHELL = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './icon-maskable-512.png'];
+const VERSION = 'ourkitchen-v2';
+const SHELL = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './icon-maskable-512.png', './fonts/fraunces-latin-wght-normal.woff2', './fonts/nunito-latin-wght-normal.woff2'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
